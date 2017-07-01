@@ -26,3 +26,5 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # bootstrap is a css framework. Provides layouts,forms etc
 gem 'bootstrap-sass'
+# devise for sign in & sign out
+gem 'devise'

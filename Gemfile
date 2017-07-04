@@ -28,3 +28,5 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 # devise for sign in & sign out
 gem 'devise'
+#font-awesome
+gem 'font-awesome-sass'

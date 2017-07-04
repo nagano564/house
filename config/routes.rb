@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   get 'welcome/about'
-  root 'todo_lists#index'
-  #root 'welcome#index'
+  get 'welcome/whatever'
+  #root 'todo_lists#index'
+  root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

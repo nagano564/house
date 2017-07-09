@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   serialize :checklist, Hash
 
   before_create :setup_checklist
+  has_many :calculators
 
   private
 

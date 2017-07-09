@@ -4,4 +4,7 @@ class WelcomeController < ApplicationController
 
   def about
   end
+
+  def lists
+  end
 end

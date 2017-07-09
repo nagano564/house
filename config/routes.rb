@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :todo_lists do
     resources :todo_items do
       member do
@@ -7,11 +8,15 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :calculators do
+    resources :user
+  end
+
   devise_for :users
   get 'welcome/index'
 
   get 'welcome/about'
-  get 'welcome/whatever'
+  get 'welcome/lists'
   #root 'todo_lists#index'
   root 'welcome#index'
 

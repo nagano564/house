@@ -1,6 +1,3 @@
-
-<%=  form_for(@user) do |f| %>
-<%= f.check_box :checklist %>
+<%  form_for :checklist do |f| %>
+<%= f.check_box :key %>
 <% end %>
-<%= current_user.checklist %>
-<%= setup_checklist %>

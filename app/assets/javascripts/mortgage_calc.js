@@ -48,3 +48,12 @@ button.onclick = function(){
 
     postPayments(pmt);
 };
+
+
+/*
+
+$("#btnCalculate").click(function(){
+  $("#outMonthly").append("pmt")
+
+})
+*/

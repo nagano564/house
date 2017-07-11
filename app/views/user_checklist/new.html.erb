@@ -1,3 +1,9 @@
-<%  form_for :checklist do |f| %>
-<%= f.check_box :key %>
+<%= form_for @user do |f| %>
+  <%= f.fields_for :checklist do |c| %>
+    <% @user.checklist.each do |todo, completed| %>
+      <%= c.check_box todo %>&nbsp;<%= c.label todo %><br />
+    <% end %>
+  <% end %>
+
+  <%= f.submit %>
 <% end %>

@@ -30,3 +30,5 @@ gem 'bootstrap-sass'
 gem 'devise'
 #font-awesome
 gem 'font-awesome-sass'
+#faker seed gem
+gem 'faker'

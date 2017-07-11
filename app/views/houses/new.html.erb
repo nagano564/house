@@ -1,0 +1,23 @@
+<%= form_for @house do |f| %>
+  <%= f.label :address, "Address of the House" %>
+  <%= f.text_field :address %>
+
+  <%= f.label :cost %>
+  <%= f.text_field :cost %>
+
+  <%= f.label :down_payment, "Amount of Down Payment" %>
+  <%= f.text_field :down_payment %>
+
+  <%= f.label :interest %>
+  <%= f.text_field :interest, placeholder: "In Percentage" %>
+
+  <%= f.label :period %>
+  <%= f.text_field :period, placeholder: "In Years" %>
+  <button id="btnCalculate">Calculate Payments</button>
+</br>
+<p><b><strong>Total Monthly Payment:</strong><span id="outMonthly"></span></b></p>
+  <%= f.label :taxes, "Annual Property Taxes" %>
+  <%= f.text_field :taxes %>
+
+  <%= f.submit "Save" %>
+<% end %>

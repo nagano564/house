@@ -29,31 +29,22 @@ function yearsToMonths(year){
 
 function postPayments(payment){
     var answer = document.getElementById("outMonthly");
-
+    console.log(answer);
     answer.innerText = "$" + payment;
 
 }
 
-var button = document.getElementById("btnCalculate");
-button.onclick = function(){
+$(document).ready(function() {
+  $("#btnCalculate").click(function(){
+      console.log("hello");
+      var cost = document.getElementById("house_cost").value;
+      var interest = document.getElementById("house_interest").value;
+      var term = document.getElementById("house_period").value;
+      var downPayment = document.getElementById("house_down_payment").value;
+      var amountBorrowed = cost - downPayment;
 
-    var cost = document.getElementById("inCost").value;
-    var interest = document.getElementById("inAPR").value;
-    var term = document.getElementById("inPeriod").value;
-    var downPayment = document.getElementById("inDown").value;
-    var amountBorrowed = cost - downPayment;
+    var pmt = calculateMortgage(amountBorrowed, interest, term);
 
-
-  var pmt = calculateMortgage(amountBorrowed, interest, term);
-
-    postPayments(pmt);
-};
-
-
-/*
-
-$("#btnCalculate").click(function(){
-  $("#outMonthly").append("pmt")
-
+      postPayments(pmt);
+  });
 })
-*/

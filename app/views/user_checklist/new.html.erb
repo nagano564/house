@@ -1,7 +1,7 @@
-<%= form_for @user do |f| %>
+<%= form_for current_user, url: {action: "update_checklist", controller: "user_checklist"}, method: :patch do |f| %>
   <%= f.fields_for :checklist do |c| %>
-    <% @user.checklist.each do |todo, completed| %>
-      <%= c.check_box todo %>&nbsp;<%= c.label todo %><br />
+    <% current_user.checklist.each do |todo, completed| %>
+      <%= c.check_box todo, checked: completed %>&nbsp;<%= c.label todo %><br />
     <% end %>
   <% end %>
 

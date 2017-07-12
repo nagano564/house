@@ -59,7 +59,7 @@ body {
 }
 
 .container {
- width: 50%;
+ width: 60%;
  max-width: 750px;
  background: $white_opaque;
  margin: 3em auto 0 auto;
@@ -217,5 +217,21 @@ input[type="submit"] {
    background: $dark;
    color: white;
  }
+}
+.dropdown-menu{
+  background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+}
+
+.list{
+  font-size: 18px;
+  font-family: cursive;
+}
+
+.list-details{
+  font-family: Cambay;
+}
+
+.list-title{
+  font-family: cursive;
 }
 ::-webkit-input-placeholder { color: $dark; }

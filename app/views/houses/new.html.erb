@@ -1,3 +1,4 @@
+
 <%= form_for @house do |f| %>
   <%= f.label :address, "Address of the House" %>
   <%= f.text_field :address %>
@@ -13,7 +14,7 @@
 
   <%= f.label :period %>
   <%= f.text_field :period, placeholder: "In Years" %>
-  <button id="btnCalculate">Calculate Payments</button>
+  <button id="btnCalculate" type="button">Calculate Payments</button>
 </br>
 <p><b><strong>Total Monthly Payment:</strong><span id="outMonthly"></span></b></p>
   <%= f.label :taxes, "Annual Property Taxes" %>

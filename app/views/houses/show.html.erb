@@ -1,6 +1,8 @@
-<p><%= @house.address %></p>
-<p><%= @house.cost %></p>
-<p><%= @house.down_payment %></p>
-<p><%= @house.interest %></p>
-<p><%= @house.period %></p>
-<p><%= @house.taxes %></p>
+<div class="container">
+  <p id="show"><strong>Address:</strong> <%= @house.address %></p>
+  <p id="show"><b>Cost of House:</b><%= @house.cost %></p>
+  <p id="show"><b>Down payment amount:</b><%= @house.down_payment %></p>
+  <p id="show"><b>Loan Interest:</b> <%= @house.interest %></p>
+  <p id="show"><b>Loan Period: </b><%= @house.period %></p>
+  <p id="show"><b>Local property taxes: </b><%= @house.taxes %></p>
+</div>

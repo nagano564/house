@@ -7,15 +7,19 @@ class User < ActiveRecord::Base
   serialize :checklist, Hash
 
   before_create :setup_checklist
-  has_many :calculators
 
   private
 
   def setup_checklist
     self.checklist = {
       "Organize Your Finances" => false,
+      "Do Calculations" => false,
       "Approval Letter" => false,
+      "Find an Agent" => false,
+      "Find a lawyer and make an offer" => false,
+      "Get the mortgage" => false,
+      "Appraisal and Home insepection" => false,
+      "Close the deal" => false
     }
   end
-
 end

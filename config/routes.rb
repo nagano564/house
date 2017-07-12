@@ -10,8 +10,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :calculators do
-    resources :user
+  resources :user_checklist, except: :update do
+    collection do
+      patch :update_checklist
+    end
   end
 
   devise_for :users

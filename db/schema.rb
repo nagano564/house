@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707171902) do
+ActiveRecord::Schema.define(version: 20170713014845) do
 
   create_table "houses", force: :cascade do |t|
     t.string   "address"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 20170707171902) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.text     "checklist"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

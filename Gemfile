@@ -32,3 +32,5 @@ gem 'devise'
 gem 'font-awesome-sass'
 #faker seed gem
 gem 'faker'
+#omniauth for facebook
+gem 'omniauth-facebook'

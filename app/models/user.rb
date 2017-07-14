@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   serialize :checklist, Hash
 
   before_create :setup_checklist
+  has_many :user_checklists
 
   def self.find_for_oauth(auth)
     find_or_create_by(uid: auth.uid, provider: auth.provider)

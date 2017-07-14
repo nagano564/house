@@ -34,3 +34,4 @@ gem 'font-awesome-sass'
 gem 'faker'
 #omniauth for facebook
 gem 'omniauth-facebook'
+gem 'omniauth'

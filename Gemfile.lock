@@ -180,6 +180,7 @@ DEPENDENCIES
   faker
   font-awesome-sass
   jquery-rails
+  omniauth
   omniauth-facebook
   pg
   rails (= 4.2.5)

@@ -8,12 +8,8 @@ class User < ActiveRecord::Base
 
   before_create :setup_checklist
 
-  def self.from_omniauth(auth)
-    where(auth.slice[:provider, :uid]).first_or_create do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
-      user.username = auth.info.nickname
-    end
+  def self.find_for_oauth(auth)
+    find_or_create_by(uid: auth.uid, provider: auth.provider)
   end
 
   private

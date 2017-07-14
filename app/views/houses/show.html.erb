@@ -5,4 +5,8 @@
   <p id="show"><b>Loan Interest:</b> <%= @house.interest %></p>
   <p id="show"><b>Loan Period: </b><%= @house.period %></p>
   <p id="show"><b>Local property taxes: </b><%= @house.taxes %></p>
+
+
+<%= link_to "Edit", edit_house_path(@house), class: 'btn btn-success' %>
+<%= link_to "Delete Post", @house, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this calculation?'} %>
 </div>

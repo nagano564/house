@@ -1,9 +1,13 @@
-<%= form_for current_user, url: {action: "update_checklist", controller: "user_checklist"}, method: :patch do |f| %>
-  <%= f.fields_for :checklist do |c| %>
-    <% current_user.checklist.each do |todo, completed| %>
-      <%= c.check_box todo, checked: completed %>&nbsp;<%= c.label todo %><br />
+<div class="container">
+  <div class="col-lg-4 col-centered">
+  <%= form_for current_user, url: {action: "update_checklist", controller: "user_checklist"}, method: :patch do |f| %>
+    <%= f.fields_for :checklist do |c| %>
+      <% current_user.checklist.each do |todo, completed| %>
+        <%= c.check_box todo, checked: completed %>&nbsp;<%= c.label todo %><br />
+      <% end %>
     <% end %>
-  <% end %>
 
-  <%= f.submit %>
-<% end %>
+    <%= f.submit("Text") %>
+  <% end %>
+  </div>
+</div>

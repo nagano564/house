@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
   def index
-    @houses = House.all
+    @houses = current_user.houses
   end
 
   def show
@@ -15,6 +15,7 @@ class HousesController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
     @house = House.new
   end
 
@@ -26,6 +27,9 @@ class HousesController < ApplicationController
     @house.interest = params[:house][:interest]
     @house.period = params[:house][:period]
     @house.taxes = params[:house][:taxes]
+    @user = User.find(params[:user_id])
+
+    @house.user = @user
 
     if @house.save
       flash[:notice] = "Post was saved."

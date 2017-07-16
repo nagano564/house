@@ -35,6 +35,7 @@ function postPayments(payment){
 }
 
 $(document).ready(function() {
+  console.log("hey")
   $("#btnCalculate").click(function(){
       console.log("hello");
       var cost = document.getElementById("house_cost").value;

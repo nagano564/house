@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :houses
-
   resources :todo_lists do
     resources :todo_items do
       member do
         patch :complete
       end
     end
+  end
+
+  resources :user do
+    resources :houses
   end
 
   resources :user_checklist, except: :update do

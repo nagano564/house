@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   before_create :setup_checklist
   has_many :user_checklists
+  has_many :houses
+  has_many :todo_lists
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

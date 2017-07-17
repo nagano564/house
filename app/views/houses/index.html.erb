@@ -1,4 +1,4 @@
 <h1>All House Calculations</h1>
 <% @houses.each do |f| %>
-  <p><%= link_to f.address, f %></p>
+  <p><%= link_to f.address, user_house_path(current_user.id, f.id) %></p>
 <% end %>

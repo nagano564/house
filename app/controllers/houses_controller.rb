@@ -33,7 +33,7 @@ class HousesController < ApplicationController
 
     if @house.save
       flash[:notice] = "Post was saved."
-      redirect_to @house
+      redirect_to [@user, @house]
     else
 
       flash.now[:alert] = "There was an error saving the post. Please try again."
@@ -52,7 +52,7 @@ class HousesController < ApplicationController
 
     if @house.save
       flash[:notice] = "Post was updated."
-      redirect_to @house
+      redirect_to user_house_path(@house.user, @house)
     else
       flash.now[:alert] = "There was an error saving the post. Please try again."
       render :edit
@@ -63,7 +63,7 @@ class HousesController < ApplicationController
     @house = House.find(params[:id])
     if @house.destroy
       flash[:notice] = "\"#{@house.address}\" was deleted successfully."
-      redirect_to @house
+      redirect_to action: 'index'
     else
       flash.now[:alert] = "There was an error deleting the post."
       render :show

@@ -12,7 +12,7 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/new
   def new
-    @todo_list = TodoList.new
+    @todo_list = current_user.todo_lists.new
   end
 
   # GET /todo_lists/1/edit
@@ -21,7 +21,7 @@ class TodoListsController < ApplicationController
 
   # POST /todo_lists
   def create
-    @todo_list = TodoList.new(todo_list_params)
+    @todo_list = current_user.todo_lists.new(todo_list_params)
 
     if @todo_list.save
       redirect_to @todo_list, notice: 'Todo list was successfully created.'

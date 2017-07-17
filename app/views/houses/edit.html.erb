@@ -1,7 +1,7 @@
 
 <h1>Edit Calculation</h1>
 
-<%= form_for @house do |f| %>
+<%= form_for [@house.user, @house] do |f| %>
   <%= f.label :address, "Address of the House" %>
   <%= f.text_field :address %>
 

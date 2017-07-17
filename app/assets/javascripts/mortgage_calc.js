@@ -29,6 +29,7 @@ function yearsToMonths(year){
 
 function postPayments(payment){
     var answer = document.getElementById("outMonthly");
+    $("#house_payment").val(payment);
     console.log(answer);
     answer.innerText = "$" + payment;
 

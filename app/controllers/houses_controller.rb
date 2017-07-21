@@ -20,16 +20,7 @@ class HousesController < ApplicationController
   end
 
   def create
-    @house = House.new
-    @house.address = params[:house][:address]
-    @house.cost = params[:house][:cost]
-    @house.down_payment = params[:house][:down_payment]
-    @house.interest = params[:house][:interest]
-    @house.period = params[:house][:period]
-    @house.taxes = params[:house][:taxes]
-    @user = User.find(params[:user_id])
-
-    @house.user = @user
+    @house = current_user.houses.new(house_params)
 
     if @house.save
       flash[:notice] = "Post was saved."
@@ -43,12 +34,7 @@ class HousesController < ApplicationController
 
   def update
     @house = House.find(params[:id])
-    @house.address = params[:house][:address]
-    @house.cost = params[:house][:cost]
-    @house.down_payment = params[:house][:down_payment]
-    @house.interest = params[:house][:interest]
-    @house.period = params[:house][:period]
-    @house.taxes = params[:house][:taxes]
+    @house.update_attributes(house_params)
 
     if @house.save
       flash[:notice] = "Post was updated."
@@ -68,5 +54,12 @@ class HousesController < ApplicationController
       flash.now[:alert] = "There was an error deleting the post."
       render :show
     end
+  end
+
+  private
+  def house_params
+    params.require(:house).permit(:address, :cost, :period, :down_payment,
+                                  :interest, :taxes, :payment)
+
   end
 end

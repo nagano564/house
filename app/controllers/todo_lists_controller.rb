@@ -32,7 +32,7 @@ class TodoListsController < ApplicationController
 
   # PATCH/PUT /todo_lists/1
   def update
-    if @todo_list.update(todo_list_params)
+    if current_user.update(todo_list_params)
       redirect_to @todo_list, notice: 'Todo list was successfully updated.'
     else
       render :edit

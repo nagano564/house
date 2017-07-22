@@ -24,7 +24,7 @@ class HousesController < ApplicationController
 
     if @house.save
       flash[:notice] = "Post was saved."
-      redirect_to [@user, @house]
+      redirect_to action: :index
     else
 
       flash.now[:alert] = "There was an error saving the post. Please try again."

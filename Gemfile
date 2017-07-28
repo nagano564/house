@@ -35,3 +35,5 @@ gem 'faker'
 #omniauth for facebook
 gem 'omniauth-facebook'
 gem 'omniauth'
+#sendgrid to deal with confirmations
+gem'sendgrid-ruby'

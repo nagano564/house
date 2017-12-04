@@ -239,4 +239,17 @@ input[type="submit"] {
   margin-top: 14px
 }
 
+.wrapper > div{
+  background: #eee;
+  padding: 1em;
+}
+
+.wrapper > div:nth-child(odd){
+  background: #ddd;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
 ::-webkit-input-placeholder { color: $dark; }

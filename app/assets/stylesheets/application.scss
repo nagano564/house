@@ -11,6 +11,7 @@
   background-position: center;
   background-size: cover;
   color: white;
+  border-radius: none;
 }
 
 h1{
@@ -255,6 +256,6 @@ input[type="submit"] {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ::-webkit-input-placeholder { color: $dark; }

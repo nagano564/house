@@ -242,10 +242,15 @@ input[type="submit"] {
 .wrapper > div{
   background: #eee;
   padding: 1em;
+  text-align: center;
 }
 
 .wrapper > div:nth-child(odd){
   background: #ddd;
+}
+
+.ion {
+  font-size: 50px;
 }
 
 .wrapper {

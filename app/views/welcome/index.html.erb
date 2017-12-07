@@ -1,5 +1,5 @@
 
-  <div class="jumbotron">
+  <div class="jumbotron someclass">
     <h1>Housing</h1>
     <p>Tips to buy your first house</p>
       <% if user_signed_in? %>
@@ -18,19 +18,19 @@
 
     <div>
       <span class="ion ion-calculator"></span>
-      <h3>Calculate monthly payments</h3>
+      <%= calc(current_user) %>
       <h4>Calculate your mortgage payments and save them right on your site</h4>
     </div>
     <div>
       <span class="ion ion-checkmark"></span>
-      <h3>Checklist</h3>
+      <%= checklist(current_user) %>
       <h4>Create a custom checklist of things to do to get your home buying process finished
           or use our default checklist to make sure you do the basics
       </h4>
     </div>
     <div>
       <span class="ion ion-lightbulb"></span>
-      <h3>Tips to buying a house</h3>
+      <%= tips(current_user) %>
       <h4>Get trusted advice from people who aren't going to make a commission off your home buying experience</h4>
     </div>
 

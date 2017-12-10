@@ -1,12 +1,19 @@
 == README
 
+ A basic tool for people to help buy their first home. An application for
+ real estate agents to give to their potential clients to differentiate
+ themselves from other agents.
+
+ www.tips4myfirsthouse.com
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
 * Ruby version
-
+  ruby 2.3.3
+  rails 4.2.5
 * System dependencies
 
 * Configuration

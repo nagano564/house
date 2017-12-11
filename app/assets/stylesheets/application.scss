@@ -13,7 +13,7 @@
   color: white;
 }
 
-.someclass {
+.main_picture {
   border-radius: 0 !important;
 }
 
@@ -243,13 +243,13 @@ input[type="submit"] {
   margin-top: 14px
 }
 
-.wrapper > div{
+.wrapper > div {
   background: #eee;
   padding: 1em;
   text-align: center;
 }
 
-.wrapper > div:nth-child(odd){
+.wrapper > div:nth-child(odd) {
   background: #ddd;
 }
 

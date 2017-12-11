@@ -41,4 +41,5 @@ gem'sendgrid-ruby'
 group :development, :test do
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'rspec-rails', '~> 3.0'
 end

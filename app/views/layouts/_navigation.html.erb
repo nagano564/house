@@ -13,10 +13,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <div class="pull-right user-info">
-          <% if user_signed_in? %>
-            <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>  User: <%= current_user.email %></li>
-        </div>
+        <% if user_signed_in? %>
         <li class="<%= get_active_class(welcome_index_path) %>"><%= link_to("Home", welcome_index_path) %></li>
         <li class="<%= 'active' if current_page?(welcome_lists_path) %>"><%= link_to "Info", welcome_lists_path %></li>
         <li class="<%= 'active' if current_page?(new_user_checklist_path) %>"><%= link_to "My List", new_user_checklist_path %></li>
@@ -29,6 +26,7 @@
         </li>
         <li class="<%= 'active' if current_page?(todo_lists_path) %>"><%= link_to "Checklist", todo_lists_path %></li>
         <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Account", edit_user_registration_path %></li>
+        <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
         <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

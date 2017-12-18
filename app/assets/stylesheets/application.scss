@@ -6,7 +6,7 @@
   // padding-left: 23px
 }
 
-.jumbotron {
+.main_picture{
   background-image: image-url("house.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -14,6 +14,14 @@
   color: white;
 }
 
+.key_picture {
+  background-image: image-url("keys.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  color: white;
+}
 .main_picture {
   border-radius: 0 !important;
 }
@@ -266,4 +274,11 @@ input[type="submit"] {
 .edit_page {
   padding-left: 10px;
 }
+
+@media only screen and (max-width: 625px){
+  .wrapper{
+    grid-template-columns: auto;
+  }
+}
+
 ::-webkit-input-placeholder { color: $dark; }

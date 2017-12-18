@@ -37,6 +37,7 @@ gem 'omniauth-facebook'
 gem 'omniauth'
 #sendgrid to deal with confirmations
 gem'sendgrid-ruby'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 
 group :development, :test do
   gem 'pry-rails'

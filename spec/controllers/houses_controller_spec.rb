@@ -5,8 +5,8 @@ RSpec.describe HousesController, type: :controller do
   
   describe "GET index" do
     let(:user) { User.create!(email: "user@bloccit.com", password: "helloworld") }
-    let (:houses) {{address: 'Levittown', cost: '400000', period: '30', down_payment: '100000', 
-                    interest: 4, taxes: '0', payment: '1432.25'}}
+    let (:houses) {{ House.create (address: 'Levittown', cost: '400000', period: '30', down_payment: '100000', 
+                    interest: 4, taxes: '0', payment: '1432.25') }}
     
     before do
       sign_in user

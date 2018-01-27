@@ -11,7 +11,6 @@ end
 
 # #2
 group :development do
-  gem 'factory_bot_rails'
   gem 'sqlite3'
 end
 
@@ -45,4 +44,5 @@ group :development, :test do
   gem 'pry-rails'
   gem 'awesome_print'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_bot_rails'
 end

@@ -25,6 +25,5 @@ Rails.application.routes.draw do
   get 'welcome/about'
   get 'welcome/lists'
   root 'welcome#index'
-  get 'houses/index'
 
 end

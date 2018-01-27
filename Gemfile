@@ -11,6 +11,7 @@ end
 
 # #2
 group :development do
+  gem 'factory_bot_rails'
   gem 'sqlite3'
 end
 
@@ -39,7 +40,6 @@ gem 'omniauth'
 gem'sendgrid-ruby'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'byebug'
-gem 'bundle'
 
 group :development, :test do
   gem 'pry-rails'

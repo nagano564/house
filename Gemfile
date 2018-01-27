@@ -38,6 +38,8 @@ gem 'omniauth'
 #sendgrid to deal with confirmations
 gem'sendgrid-ruby'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'byebug'
+gem 'bundle'
 
 group :development, :test do
   gem 'pry-rails'

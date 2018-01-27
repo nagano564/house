@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
   get 'welcome/lists'
-  #root 'todo_lists#index'
   root 'welcome#index'
+  get 'houses/index'
 
 end

@@ -1,4 +1,5 @@
 class HousesController < ApplicationController
+  
   def index
     @houses = current_user.houses
   end

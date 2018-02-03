@@ -1,21 +1,16 @@
 
   <div class="jumbotron main_picture">
     <h1>Housing</h1>
-    <p>Tips to buy your first house</p>
+    <p class='home'>Make your house buying process easier</p>
       <% if user_signed_in? %>
-
       <% else %>
-      <%= link_to "Sign In", new_user_session_path %> or
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
       <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
-      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-
-
-
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: 'btn btn-primary' %>
     <% end %>
   </div>
 
   <div class='wrapper'>
-
     <div>
       <span class="ion ion-calculator"></span>
       <%= calc(current_user) %>
@@ -33,5 +28,4 @@
       <%= tips(current_user) %>
       <h4>Get trusted advice from people who aren't going to make a commission off your home buying experience</h4>
     </div>
-
   </div>

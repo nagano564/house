@@ -1,7 +1,7 @@
 class TodoItemsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_todo_list
   before_action :set_todo_item, except: [:create]
-
 
 	def create
 		@todo_item = @todo_list.todo_items.create(todo_item_params)
@@ -9,11 +9,11 @@ class TodoItemsController < ApplicationController
 	end
 
   def destroy
-      if @todo_item.destroy
-        flash[:success] = "ToDo item was deleted"
-      else
-        flash[:error] = "ToDo item could not be delete. Please try again."
-      end
+    if @todo_item.destroy
+      flash[:success] = "ToDo item was deleted"
+    else
+      flash[:error] = "ToDo item could not be delete. Please try again."
+    end
     redirect_to @todo_list
   end
 
@@ -23,6 +23,7 @@ class TodoItemsController < ApplicationController
   end
 
   private
+
   def set_todo_list
     @todo_list = TodoList.find(params[:todo_list_id])
   end

@@ -1,22 +1,15 @@
-
-
 // The formula: c = (r * p)/(1 - (Math.pow((1 + r), (-n))))
 // @param p float amount borrowed
 // @param r interest as a percentage
 // @param n term in years
 function calculateMortgage(p, r, n){
 
-
-  //percentToDecimal(r)
   r = percentToDecimal(r);
-
-  //convert years to months
   n = yearsToMonths(n);
 
   var pmt = (r * p)/(1 - (Math.pow((1 + r), (-n))));
 
   return parseFloat(pmt.toFixed(2));
-
 }
 
 function percentToDecimal(percent){
@@ -32,7 +25,6 @@ function postPayments(payment){
     $("#house_payment").val(payment);
     console.log(answer);
     answer.innerText = "$" + payment;
-
 }
 
 $(document).ready(function() {
@@ -45,7 +37,7 @@ $(document).ready(function() {
       var downPayment = document.getElementById("house_down_payment").value;
       var amountBorrowed = cost - downPayment;
 
-    var pmt = calculateMortgage(amountBorrowed, interest, term);
+      var pmt = calculateMortgage(amountBorrowed, interest, term);
 
       postPayments(pmt);
   });

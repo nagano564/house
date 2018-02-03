@@ -29,6 +29,16 @@
 h1{
   text-align: center;
 }
+
+.home{
+  font-weight: bold;
+  text-align: center;
+}
+
+p{
+  font-weight: bold;
+}
+
 .key {
   padding-top: 30px;
   align-content: center;
@@ -238,6 +248,7 @@ input[type="submit"] {
 .list{
   font-size: 18px;
   font-family: cursive;
+  font-weight: bold;
 }
 
 .list-details{

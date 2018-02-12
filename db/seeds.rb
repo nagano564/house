@@ -15,3 +15,4 @@ houses = House.all
 
 puts "Seed Finished"
 puts "#{House.count} houses created"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

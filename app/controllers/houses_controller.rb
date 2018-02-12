@@ -24,7 +24,7 @@ class HousesController < ApplicationController
   def create
     @house = current_user.houses.new(house_params)
 
-    if @house.save && params[:address].present? 
+    if @house.save
       flash[:notice] = "Post was saved."
       redirect_to action: :index
     else

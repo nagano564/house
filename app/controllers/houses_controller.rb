@@ -22,6 +22,7 @@ class HousesController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
     @house = current_user.houses.new(house_params)
 
     if @house.save
@@ -29,7 +30,7 @@ class HousesController < ApplicationController
       redirect_to action: :index
     else
 
-      flash.now[:alert] = "There was an error saving the post. Please try again."
+      flash.now[:alert] = "There was an error saving the post. Address is mandatory."
       render :new
     end
   end

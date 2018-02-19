@@ -1,20 +1,6 @@
 
 <%= form_for [@user, @house] do |f| %>
-  <%= f.label :address, "Address of the House" %>
-  <%= f.text_field :address %>
-
-  <%= f.label :cost %>
-  <%= f.text_field :cost %>
-
-  <%= f.label :down_payment, "Amount of Down Payment" %>
-  <%= f.text_field :down_payment %>
-
-  <%= f.label :interest, "Interest Rate" %>
-  <%= f.text_field :interest, placeholder: "In Percentage" %>
-
-  <%= f.label :period %>
-  <%= f.text_field :period, placeholder: "In Years" %>
-  <%= f.hidden_field :payment %>
+  <%= render(:partial => 'form', :locals => {:f => f}) %>
   <button id="btnCalculate" type="button" class="btn btn-default">Calculate Payments</button>
 </br>
 <p><b><strong>Total Monthly Payment:</strong><span id="outMonthly"></span></b></p>

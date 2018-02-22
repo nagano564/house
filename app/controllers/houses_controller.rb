@@ -29,8 +29,6 @@ class HousesController < ApplicationController
       flash[:notice] = "Post was saved."
       redirect_to action: :index
     else
-
-      flash.now[:alert] = "There was an error saving the post. Address is mandatory."
       render :new
     end
   end
@@ -43,7 +41,6 @@ class HousesController < ApplicationController
       flash[:notice] = "Post was updated."
       redirect_to user_house_path(@house.user, @house)
     else
-      flash.now[:alert] = "There was an error saving the post. Please try again."
       render :edit
     end
   end

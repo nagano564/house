@@ -11,21 +11,22 @@
   <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body>
-  <div class="container">
-    <%= render 'layouts/navigation' %>
-  <% if flash[:notice] %>
-  <div class="alert alert-success">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <%= flash[:notice] %>
-  </div>
-<% elsif flash[:alert] %>
-  <div class="alert alert-warning">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <%= flash[:alert] %>
-  </div>
-<% end %>
 
-  <%= yield %>
-
+    <div class="container">
+      <%= render 'layouts/navigation' %>
+    <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:notice] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  <div class="container whole-site-container">
+    <%= yield %>
+  </div>
 </body>
 </html>

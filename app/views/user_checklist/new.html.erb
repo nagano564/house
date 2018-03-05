@@ -1,5 +1,5 @@
 <div class='container-fluid'>
-  <div>
+  <div='check'>
   <%= form_for current_user, url: {action: "update_checklist", controller: "user_checklist"}, method: :patch do |f| %>
     <%= f.fields_for :checklist do |c| %>
       <% current_user.checklist.each do |todo, completed| %>

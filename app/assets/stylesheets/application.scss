@@ -81,9 +81,17 @@ body {
  font-weight: 100;
 }
 
-.container {
- width: 60%;
- max-width: 750px;
+.center {
+  text-align: center;
+}
+
+.edit_user{
+  text-align: center;
+}
+
+.container-fluid {
+ width: 97%;
+ // max-width: 1000px;
  background: $white_opaque;
  margin: 3em auto 0 auto;
  border-radius: 7px;
@@ -91,7 +99,9 @@ body {
  box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
  padding: 1em 0;
 }
-
+.icon-bar {
+   background-color: black !important;
+}
 .todo_list_title {
  text-align: center;
  font-weight: 700;
@@ -123,6 +133,14 @@ body {
  .todo_list_sub_title {
    margin-bottom: 0;
  }
+}
+
+.jumbotron{
+  margin-bottom: auto;
+}
+
+.main_picture{
+  height: 300px;
 }
 
 #todo_items_wrapper {

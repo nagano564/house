@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212175144) do
+ActiveRecord::Schema.define(version: 20180305182248) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(version: 20180212175144) do
     t.datetime "updated_at",   null: false
     t.integer  "user_id"
     t.decimal  "payment"
+    t.decimal  "insurance"
+    t.decimal  "bank_payment"
+    t.decimal  "total"
   end
 
   add_index "houses", ["user_id"], name: "index_houses_on_user_id"

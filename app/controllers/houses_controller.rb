@@ -62,7 +62,7 @@ class HousesController < ApplicationController
   private
   def house_params
     params.require(:house).permit(:address, :cost, :period, :down_payment,
-                                  :interest, :taxes, :payment)
+                                  :interest, :taxes, :payment, :insurance, :total)
 
   end
 end

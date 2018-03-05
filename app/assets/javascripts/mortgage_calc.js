@@ -41,4 +41,29 @@ $(document).ready(function() {
 
       postPayments(pmt);
   });
+
+  function postTotalPayments(payment){
+      var totalAnswer = document.getElementById("outTotal");
+      $("#house_total").val(payment);
+      totalAnswer.innerText = "$" + payment;
+  }
+
+  $(document).ready(function() {
+    console.log("hey")
+    $("#btnTotal").click(function(){
+        console.log("hello");
+        var cost = document.getElementById("house_cost").value;
+        var interest = document.getElementById("house_interest").value;
+        var term = document.getElementById("house_period").value;
+        var downPayment = document.getElementById("house_down_payment").value;
+        var amountBorrowed = cost - downPayment;
+        var taxes = document.getElementById("house_taxes").value;
+        var insurance = document.getElementById("house_insurance").value;
+
+        var pmt = calculateMortgage(amountBorrowed, interest, term);
+        var totalPmt = pmt + (taxes / 12) + (insurance / 12)
+
+        postTotalPayments(totalPmt);
+    });
+  })
 })

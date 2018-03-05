@@ -216,7 +216,7 @@ body {
  display: block;
  margin: 1.5em auto 0 auto;
  text-align: center;
- font-size: 0.8em;
+ font-size: 20px;
  color: white;
  a {
    color: white;
@@ -312,6 +312,10 @@ input[type="submit"] {
 
 .btn {
   color: black
+}
+
+.list{
+  text-align: center;
 }
 
 ::-webkit-input-placeholder { color: $dark; }

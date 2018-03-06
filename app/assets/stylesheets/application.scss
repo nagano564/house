@@ -318,4 +318,18 @@ input[type="submit"] {
   text-align: center;
 }
 
+// #bootstrap-overide .panel {
+//  background-color: transparent;
+// }
+
+.side-nav-panel-body {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#twitter-widget-0{
+  min-width: 160px !important;
+}
+
 ::-webkit-input-placeholder { color: $dark; }

@@ -331,5 +331,7 @@ input[type="submit"] {
 #twitter-widget-0{
   min-width: 160px !important;
 }
-
+.active{
+  border-bottom: 2.5px solid #000099;
+}
 ::-webkit-input-placeholder { color: $dark; }

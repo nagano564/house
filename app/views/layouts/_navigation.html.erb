@@ -25,6 +25,7 @@
           </ul>
         </li>
         <li class="<%= 'active' if current_page?(todo_lists_path) %>"><%= link_to "Checklist", todo_lists_path %></li>
+        <li class="<%= 'active' if current_page?(welcome_about_path) %>"><%= link_to "Find a House", welcome_about_path %></li>
         <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Account", edit_user_registration_path %></li>
         <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
         <% end %>

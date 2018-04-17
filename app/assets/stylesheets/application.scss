@@ -334,4 +334,9 @@ input[type="submit"] {
 .active{
   border-bottom: 2.5px solid #000099;
 }
+
+div.table iframe{
+  width: 100%
+}
+
 ::-webkit-input-placeholder { color: $dark; }

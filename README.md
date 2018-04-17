@@ -34,3 +34,17 @@ On the homepage I have a few ways to navigate to the features of the page. There
 all of the hottest real estate trends so people can find them right on the homepage
 
 ![alt text](https://raw.githubusercontent.com/nagano564/house/master/app/assets/images/homepage.png)
+
+I created a checklist so people can keep track of what to do while they are looking for homes. The site is
+responsive and mobile friendly so they can add items right from their phone while getting ideas of what needs to
+done in order to purchase their dream home.
+
+![alt text](https://raw.githubusercontent.com/nagano564/house/master/app/assets/images/checklist.png)
+![alt text](https://raw.githubusercontent.com/nagano564/house/master/app/assets/images/mobile.png)
+
+I thought that having the zillow api would be the most accurate way of having people be able to search for a
+home from my website so I added the zillow search api.
+
+![alt text](https://raw.githubusercontent.com/nagano564/house/master/app/assets/images/zillow.png)
+
+Happy House Hunting!!!!

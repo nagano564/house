@@ -29,3 +29,8 @@ To run the project locally from the terminal run and
 rails s
 ```
 You should be able to navigate to `localhost:3000` and see the site.
+
+On the homepage I have a few ways to navigate to the features of the page. There is also twitter feed from
+all of the hottest real estate trends so people can find them right on the homepage
+
+![alt text](https://raw.githubusercontent.com/nagano564/house/master/app/assets/images/homepage.png)

@@ -23,8 +23,8 @@ Make sure you cd into the project folder and from your terminal run
 rake db:migrate
 rake db:seed
 ```
-After this you should have most of the basic information running
-To run the project locally from the terminal run and
+After this you should have most of the basic information.
+To run the project locally from the terminal enter:
 ```
 rails s
 ```
